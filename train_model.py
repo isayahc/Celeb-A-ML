@@ -15,6 +15,10 @@ data_dir = 'datasets/celeba/'
 # Define the path for saving weights
 weights_dir = './weights'
 
+
+if not os.path.exists(data_dir):
+    raise FileNotFoundError("Please run setup_dataset.py or setup_dataset.sh")
+
 # Create the directory if it doesn't exist
 if not os.path.exists(weights_dir):
     os.makedirs(weights_dir)
